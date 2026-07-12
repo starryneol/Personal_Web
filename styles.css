@@ -354,7 +354,7 @@ main {
 
 .featured-project {
   display: grid;
-  grid-template-columns: minmax(320px, 0.86fr) minmax(0, 1.14fr);
+  grid-template-columns: minmax(440px, 1fr) minmax(0, 1.08fr);
   gap: 48px;
   align-items: center;
   padding: 30px;
@@ -366,7 +366,7 @@ main {
 
 .project-visual {
   width: 100%;
-  max-width: 460px;
+  max-width: 620px;
   margin: 0 auto;
   overflow: hidden;
   border: 1px solid var(--line);
@@ -377,7 +377,7 @@ main {
 .project-visual img {
   display: block;
   width: 100%;
-  aspect-ratio: 591 / 218;
+  height: clamp(260px, 19vw, 330px);
   object-fit: cover;
 }
 
