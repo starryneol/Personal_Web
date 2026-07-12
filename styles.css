@@ -354,9 +354,9 @@ main {
 
 .featured-project {
   display: grid;
-  grid-template-columns: 340px minmax(0, 1fr);
-  gap: 44px;
-  align-items: start;
+  grid-template-columns: minmax(320px, 0.86fr) minmax(0, 1.14fr);
+  gap: 48px;
+  align-items: center;
   padding: 30px;
   border: 1px solid var(--line);
   border-radius: 18px;
@@ -366,6 +366,8 @@ main {
 
 .project-visual {
   width: 100%;
+  max-width: 460px;
+  margin: 0 auto;
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 14px;
