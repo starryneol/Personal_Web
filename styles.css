@@ -153,6 +153,37 @@ main {
   font-weight: 760;
 }
 
+.hero-email {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px;
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.hero-email span {
+  color: #536176;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero-email a {
+  color: var(--blue);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.hero-email a:hover,
+.hero-email a:focus-visible {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .intro {
   max-width: 780px;
   margin: 28px 0 0;
