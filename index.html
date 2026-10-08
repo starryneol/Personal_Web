@@ -148,33 +148,87 @@
               <strong>Ray-based distributed rollout pipeline</strong>.
             </p>
             <div class="project-links">
-              <button type="button" data-toggle="ariadne-abstract">Abstract</button>
+              <a href="ariadne2/">Project page</a>
               <a href="assets/docs/Shi_Luode_CV.pdf">CV</a>
             </div>
-            <p id="ariadne-abstract" class="abstract">
-              Evaluation is organized around 4,000 training maps and 100 held-out test maps, with
-              cluster-wise candidate pruning and GT-guided expert path alignment used to improve
-              training signal quality.
-            </p>
           </div>
         </article>
 
         <div class="research-list">
           <article>
-            <h3>Preference-Conditioned Optimization</h3>
+            <div class="research-card-visual">
+              <img
+                src="assets/img/pamao/momtsp-ablation.png"
+                alt="MOMTSP ablation chart comparing the base method, AWPI, CSI, and PAMAO-M"
+                loading="lazy"
+              />
+            </div>
+            <h3>PAMAO: Preference-Adaptive Multi-Agent Optimization</h3>
             <p>
-              Research framework for <strong>multi-objective combinatorial optimization</strong> across
-              MOMTSP, HCVRP, FJSP, and FFSP, using Hydra-managed experiments and preference scans.
+              We propose PAMAO, an architecture-agnostic framework for
+              <strong>multi-objective multi-agent combinatorial optimization</strong>. <strong>Agent-wise
+              Preference Injection (AWPI)</strong> uses each agent's decoder state relative to its teammates
+              to adapt how a shared preference shapes its query before joint decisions. <strong>Collaborative
+              Self-Improvement (CSI)</strong> gathers candidate trajectories from neighboring preferences,
+              re-scores them for the center preference, and replays the selected pseudo-expert to improve
+              training. Experiments cover multi-objective multiple traveling salesman (MOMTSP) and
+              multi-objective multi-agent flexible job-shop scheduling (MOMAFJSP). We instantiate PAMAO
+              with MACSIM and PARCO-WECA backbones; results improve on preference-conditioned baselines,
+              while specialized solvers remain stronger in some settings.
+            </p>
+            <div class="project-links">
+              <button type="button" data-toggle="pamao-abstract">Abstract</button>
+              <a href="pamao/">Project page</a>
+            </div>
+            <p id="pamao-abstract" class="abstract is-collapsed">
+              Existing neural solvers for multi-agent combinatorial optimization (MACO) coordinate the
+              decisions of multiple agents, such as vehicles in routing and machines in scheduling,
+              toward a single global objective. In practice, however, applications often involve
+              conflicting objectives, giving rise to multi-objective MACO (MOMACO). Extending existing
+              multi-objective neural methods to MOMACO is non-trivial because they overlook the
+              multi-agent structure in both decision-making and learning. In decision-making, a shared
+              preference must induce different decisions for agents with distinct, evolving states; in
+              learning, solutions obtained under different preferences should be exploited as
+              complementary supervision for improving the Pareto front (PF). To address these
+              challenges, we propose PAMAO, an architecture-agnostic framework for MOMACO. First, we
+              introduce an agent-wise preference adaptation module that contextualizes the shared
+              preference with each agent's state relative to its teammates, yielding agent-specific
+              queries at each decision step. Second, we propose a neighborhood collaborative
+              self-improving scheme in which each preference subproblem selects its supervision from
+              the expert solutions within its neighborhood. Experiments on multi-objective routing and
+              scheduling problems show that PAMAO consistently improves the PFs of its multi-objective
+              base method across two MACO backbones.
             </p>
           </article>
           <article>
             <h3>Machine Vision</h3>
             <p>
-              Experience in data collection, annotation, <strong>YOLOv5</strong>, <strong>DeepSort</strong>,
+              Experience in data collection and annotation, <strong>DeepSort</strong>,
               MMTracking customization, and MXVision-based industrial inspection workflows.
             </p>
           </article>
         </div>
+
+        <figure class="method-overview">
+          <a
+            href="assets/img/pamao-method-overview.png"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Open the full-size PAMAO method overview in a new tab"
+          >
+            <img
+              src="assets/img/pamao-method-overview.png"
+              alt="PAMAO diagram showing agent-wise preference injection before joint decisions and collaborative self-improvement during training"
+              width="2300"
+              height="1100"
+              loading="lazy"
+            />
+          </a>
+          <figcaption>
+            PAMAO overview: AWPI adapts the shared preference to team-relative agent states; CSI
+            exchanges and re-scores trajectories from neighboring preferences during training.
+          </figcaption>
+        </figure>
       </section>
 
       <section id="news" class="section two-column" aria-labelledby="news-title">

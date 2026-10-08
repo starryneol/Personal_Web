@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Ariadne2 | Shi Luode</title>
+    <meta
+      name="description"
+      content="Ariadne2: reinforcement learning for single-robot autonomous exploration."
+    />
+    <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../index.html#home" aria-label="Shi Luode homepage">
+        <span class="brand-mark">SL</span>
+        <span>
+          <strong>Shi Luode</strong>
+          <small>施罗德</small>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="nav-link" href="../index.html#home">Home</a>
+        <a class="nav-link active" href="../index.html#research">Research</a>
+        <a class="nav-link" href="../index.html#news">News</a>
+        <a class="nav-link" href="../index.html#education">Education</a>
+        <a class="nav-link" href="../index.html#honors">Honors</a>
+        <a class="nav-link" href="../assets/docs/Shi_Luode_CV.pdf">CV</a>
+      </nav>
+      <button class="mobile-menu" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <main class="project-page">
+      <a class="back-link" href="../index.html#research">← Back to research</a>
+
+      <section class="project-hero" aria-labelledby="project-title">
+        <div class="project-hero-copy">
+          <p class="eyebrow">Featured project · 2025–Present</p>
+          <h1 id="project-title">Ariadne2: Reinforcement Learning for Single-Robot Autonomous Exploration</h1>
+          <p class="project-lead">
+            A learning-based exploration system for selecting informative frontier viewpoints in unknown
+            occupancy-grid environments while respecting low-level motion constraints.
+          </p>
+          <div class="project-tags" aria-label="Ariadne2 methods">
+            <span>Soft Actor-Critic</span>
+            <span>Transformer</span>
+            <span>A*</span>
+            <span>Ray</span>
+          </div>
+        </div>
+        <figure class="project-hero-figure">
+          <img
+            src="../assets/img/ariadne2/overview.png"
+            alt="Ariadne2 exploration scene with a robot, frontier candidates, and a planned path"
+          />
+          <figcaption>Overview of the exploration setting and candidate frontier viewpoints.</figcaption>
+        </figure>
+      </section>
+
+      <section class="project-detail-grid">
+        <div class="project-copy">
+          <p class="eyebrow">Project overview</p>
+          <h2>Learning to decide where the robot should explore next.</h2>
+          <p>
+            Ariadne2 formulates autonomous exploration as a graph-structured sequential decision problem
+            over dynamic frontier viewpoints. The policy combines frontier clustering, Gaussian viewpoint
+            proposal, Transformer encoding, pointer-style action selection, and A*-constrained execution.
+          </p>
+          <p>
+            Training uses Soft Actor-Critic with expert-aligned rewards and a Ray-based distributed rollout
+            pipeline. The result is a planner that connects high-level information gain with feasible robot
+            motion in the current map.
+          </p>
+        </div>
+        <aside class="project-facts" aria-label="Ariadne2 project facts">
+          <div>
+            <span>Task</span>
+            <strong>Single-robot autonomous exploration</strong>
+          </div>
+          <div>
+            <span>Environment</span>
+            <strong>Unknown occupancy-grid maps</strong>
+          </div>
+          <div>
+            <span>Pipeline</span>
+            <strong>Distributed training and rollout</strong>
+          </div>
+        </aside>
+      </section>
+
+      <section class="project-section" aria-labelledby="rollouts-title">
+        <div class="section-heading compact">
+          <p>Exploration rollouts</p>
+          <h2 id="rollouts-title">A few sample trajectories from the project.</h2>
+        </div>
+        <div class="project-gallery">
+          <figure class="media-card">
+            <img
+              src="../assets/img/ariadne2/exploration-300.gif"
+              alt="Animated Ariadne2 rollout on a multi-agent exploration map"
+              loading="lazy"
+            />
+            <figcaption>Sample rollout with frontier discovery and route growth.</figcaption>
+          </figure>
+          <figure class="media-card">
+            <img
+              src="../assets/img/ariadne2/exploration-700.gif"
+              alt="Animated Ariadne2 rollout on a second exploration map"
+              loading="lazy"
+            />
+            <figcaption>Another rollout showing the planner navigating around obstacles.</figcaption>
+          </figure>
+        </div>
+        <p class="project-note">The animations are representative visualizations from the current experiment folder.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Shi Luode. Built as a static academic personal website.</p>
+      <a href="mailto:e1539282@u.nus.edu">e1539282@u.nus.edu</a>
+    </footer>
+    <script src="../script.js"></script>
+  </body>
+</html>

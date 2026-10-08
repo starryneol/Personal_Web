@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>PAMAO | Shi Luode</title>
+    <meta
+      name="description"
+      content="PAMAO: preference-adaptive multi-agent optimization for multi-objective combinatorial optimization."
+    />
+    <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="../index.html#home" aria-label="Shi Luode homepage">
+        <span class="brand-mark">SL</span>
+        <span>
+          <strong>Shi Luode</strong>
+          <small>施罗德</small>
+        </span>
+      </a>
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="nav-link" href="../index.html#home">Home</a>
+        <a class="nav-link active" href="../index.html#research">Research</a>
+        <a class="nav-link" href="../index.html#news">News</a>
+        <a class="nav-link" href="../index.html#education">Education</a>
+        <a class="nav-link" href="../index.html#honors">Honors</a>
+        <a class="nav-link" href="../assets/docs/Shi_Luode_CV.pdf">CV</a>
+      </nav>
+      <button class="mobile-menu" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </header>
+
+    <main class="project-page">
+      <a class="back-link" href="../index.html#research">← Back to research</a>
+
+      <section class="project-hero" aria-labelledby="project-title">
+        <div class="project-hero-copy">
+          <p class="eyebrow">Featured paper · PAMAO</p>
+          <h1 id="project-title">Preference-Adaptive Multi-Agent Optimization</h1>
+          <p class="project-lead">
+            An architecture-agnostic framework for multi-objective multi-agent combinatorial optimization,
+            with preference adaptation at decision time and collaborative self-improvement during training.
+          </p>
+          <div class="project-tags" aria-label="PAMAO components">
+            <span>AWPI</span>
+            <span>CSI</span>
+            <span>MOMTSP</span>
+            <span>MOMAFJSP</span>
+          </div>
+        </div>
+        <figure class="project-hero-figure">
+          <img
+            src="../assets/img/pamao/method-overview.png"
+            alt="PAMAO method overview showing agent-wise preference injection and collaborative self-improvement"
+          />
+          <figcaption>Current method overview: agent-wise preference injection and collaborative self-improvement.</figcaption>
+        </figure>
+      </section>
+
+      <section class="project-detail-grid">
+        <div class="project-copy">
+          <p class="eyebrow">Abstract</p>
+          <h2>Learning from the structure of multi-agent decisions.</h2>
+          <p>
+            Existing neural solvers for multi-agent combinatorial optimization coordinate multiple agents
+            toward a single global objective. PAMAO addresses the multi-objective setting by accounting for
+            the agents' distinct, evolving states during decision-making and by reusing solutions from
+            nearby preference subproblems during learning.
+          </p>
+          <p>
+            Agent-wise Preference Injection (AWPI) contextualizes a shared preference with each agent's
+            state relative to its teammates. Collaborative Self-Improvement (CSI) gathers neighboring
+            trajectories, re-scores them under the center preference, and replays the selected pseudo-expert.
+          </p>
+        </div>
+        <aside class="project-facts" aria-label="PAMAO project facts">
+          <div>
+            <span>Problems</span>
+            <strong>MOMTSP and MOMAFJSP</strong>
+          </div>
+          <div>
+            <span>Backbones</span>
+            <strong>MACSIM and PARCO-WECA</strong>
+          </div>
+          <div>
+            <span>Goal</span>
+            <strong>Improve preference-conditioned Pareto fronts</strong>
+          </div>
+        </aside>
+      </section>
+
+      <section class="project-section" aria-labelledby="results-title">
+        <div class="section-heading compact">
+          <p>Combinatorial optimization</p>
+          <h2 id="results-title">Method and early comparison figures.</h2>
+        </div>
+        <div class="pamao-figures">
+          <figure class="paper-figure paper-figure-wide">
+            <img
+              src="../assets/img/pamao/method-overview.png"
+              alt="Detailed PAMAO architecture overview"
+              loading="lazy"
+            />
+            <figcaption>Architecture overview used in the current paper draft.</figcaption>
+          </figure>
+          <figure class="paper-figure">
+            <img
+              src="../assets/img/pamao/momtsp-ablation.png"
+              alt="MOMTSP ablation chart comparing Base, AWPI only, CSI only, and PAMAO-M"
+              loading="lazy"
+            />
+            <figcaption>MOMTSP ablation figure comparing the two proposed components.</figcaption>
+          </figure>
+        </div>
+        <p class="project-note">This page currently uses the available paper figures as a visual project preview.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 Shi Luode. Built as a static academic personal website.</p>
+      <a href="mailto:e1539282@u.nus.edu">e1539282@u.nus.edu</a>
+    </footer>
+    <script src="../script.js"></script>
+  </body>
+</html>
