@@ -3,128 +3,78 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ffffff" />
     <title>PAMAO | Shi Luode</title>
-    <meta
-      name="description"
-      content="PAMAO: preference-adaptive multi-agent optimization for multi-objective combinatorial optimization."
-    />
+    <meta name="description" content="PAMAO: preference-adaptive learning for multi-objective multi-agent combinatorial optimization." />
+    <link rel="canonical" href="https://starryneol.github.io/Personal_Web/pamao/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Shi Luode" />
+    <meta property="og:title" content="PAMAO | Shi Luode" />
+    <meta property="og:description" content="PAMAO is an architecture-agnostic framework for multi-objective multi-agent combinatorial optimization, using agent-wise preference adaptation and collaborative self-improvement." />
+    <meta property="og:url" content="https://starryneol.github.io/Personal_Web/pamao/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="PAMAO | Shi Luode" />
+    <meta name="twitter:description" content="PAMAO is an architecture-agnostic framework for multi-objective multi-agent combinatorial optimization, using agent-wise preference adaptation and collaborative self-improvement." />
     <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="../styles.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="site-header">
-      <a class="brand" href="../index.html#home" aria-label="Shi Luode homepage">
-        <span class="brand-mark">SL</span>
-        <span>
-          <strong>Shi Luode</strong>
-          <small>施罗德</small>
-        </span>
-      </a>
-      <nav class="nav" aria-label="Primary navigation">
-        <a class="nav-link" href="../index.html#home">Home</a>
-        <a class="nav-link active" href="../index.html#research">Research</a>
-        <a class="nav-link" href="../index.html#news">News</a>
-        <a class="nav-link" href="../index.html#education">Education</a>
-        <a class="nav-link" href="../index.html#honors">Honors</a>
-        <a class="nav-link" href="../assets/docs/Shi_Luode_CV.pdf">CV</a>
+      <a class="brand" href="../index.html#home" aria-label="Shi Luode homepage">Shi Luode</a>
+      <button class="mobile-menu" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav"><span></span><span></span></button>
+      <nav class="nav" id="site-nav" aria-label="Primary navigation">
+        <a class="nav-link" href="../index.html#home">Home</a><a class="nav-link active" href="../index.html#research" aria-current="location">Research</a><a class="nav-link" href="../index.html#news">News</a><a class="nav-link" href="../index.html#education">Education</a><a class="nav-link" href="../index.html#experience">Experience</a><a class="nav-link" href="../index.html#honors">Honors</a><a class="nav-link" href="../assets/docs/Shi_Luode_CV.pdf">CV</a>
       </nav>
-      <button class="mobile-menu" type="button" aria-label="Open navigation" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
     </header>
 
-    <main class="project-page">
-      <a class="back-link" href="../index.html#research">← Back to research</a>
+    <main id="main-content" class="project-page" tabindex="-1">
+      <a class="back-link" href="../index.html#research">← Back to Research</a>
+      <header class="project-heading">
+        <h1 id="project-title" class="project-title">PAMAO: Preference-Adaptive Multi-Agent Optimization</h1>
+        <p class="project-lead">An architecture-agnostic framework for multi-objective multi-agent combinatorial optimization, with agent-wise preference adaptation and collaborative self-improvement.</p>
+        <p class="project-meta"><span>Current research · MARMoT Laboratory, NUS</span><span>2026–Present</span></p>
+      </header>
 
-      <section class="project-hero" aria-labelledby="project-title">
-        <div class="project-hero-copy">
-          <p class="eyebrow">Featured paper · PAMAO</p>
-          <h1 id="project-title">Preference-Adaptive Multi-Agent Optimization</h1>
-          <p class="project-lead">
-            An architecture-agnostic framework for multi-objective multi-agent combinatorial optimization,
-            with preference adaptation at decision time and collaborative self-improvement during training.
-          </p>
-          <div class="project-tags" aria-label="PAMAO components">
-            <span>AWPI</span>
-            <span>CSI</span>
-            <span>MOMTSP</span>
-            <span>MOMAFJSP</span>
-          </div>
-        </div>
-        <figure class="project-hero-figure">
-          <img
-            src="../assets/img/pamao/method-overview.webp"
-            alt="PAMAO method overview showing agent-wise preference injection and collaborative self-improvement"
-          />
-          <figcaption>Current method overview: agent-wise preference injection and collaborative self-improvement.</figcaption>
+      <section class="project-block" aria-labelledby="abstract-title">
+        <h2 id="abstract-title">Abstract</h2>
+        <p>
+          Existing neural solvers for multi-agent combinatorial optimization coordinate the decisions of
+          multiple agents toward a single global objective. In practice, however, applications often involve
+          conflicting objectives, giving rise to multi-objective multi-agent combinatorial optimization
+          (MOMACO). Extending existing multi-objective neural methods to MOMACO is non-trivial because they
+          overlook the multi-agent structure in both decision-making and learning.
+        </p>
+        <p>
+          We propose PAMAO, an architecture-agnostic framework for MOMACO. Agent-wise Preference Injection
+          (AWPI) contextualizes the shared preference with each agent’s state relative to its teammates,
+          yielding agent-specific queries at each decision step. Collaborative Self-Improvement (CSI) lets each
+          preference subproblem select its supervision from expert solutions in its neighborhood. Experiments
+          evaluate MOMTSP, MOHCVRP, and MOMAFJSP using MACSIM and PARCO-WECA backbones.
+        </p>
+        <dl class="project-facts">
+          <div><dt>Components</dt><dd>AWPI · CSI</dd></div>
+          <div><dt>Problems</dt><dd>MOMTSP · MOHCVRP · MOMAFJSP</dd></div>
+          <div><dt>Backbones</dt><dd>MACSIM · PARCO-WECA</dd></div>
+        </dl>
+      </section>
+
+      <section class="project-block" aria-labelledby="results-title">
+        <h2 id="results-title">Evaluation</h2>
+        <p>
+          We evaluate preference-conditioned solution quality and trade-off coverage on three tasks:
+          multi-objective multiple traveling-salesperson (MOMTSP), multi-objective heterogeneous capacitated
+          vehicle-routing (MOHCVRP), and multi-objective multi-agent flexible job-shop scheduling (MOMAFJSP).
+          The ablation below compares the full method with variants that remove one of its two components.
+        </p>
+        <figure class="project-figure results-figure">
+          <img src="../assets/img/pamao/momtsp-ablation.png" alt="MOMTSP ablation comparing the base method, AWPI, CSI, and PAMAO-M" loading="lazy" width="950" height="390" />
+          <figcaption>MOMTSP ablation study for Agent-wise Preference Injection and Collaborative Self-Improvement.</figcaption>
         </figure>
-      </section>
-
-      <section class="project-detail-grid">
-        <div class="project-copy">
-          <p class="eyebrow">Abstract</p>
-          <h2>Learning from the structure of multi-agent decisions.</h2>
-          <p>
-            Existing neural solvers for multi-agent combinatorial optimization coordinate multiple agents
-            toward a single global objective. PAMAO addresses the multi-objective setting by accounting for
-            the agents' distinct, evolving states during decision-making and by reusing solutions from
-            nearby preference subproblems during learning.
-          </p>
-          <p>
-            Agent-wise Preference Injection (AWPI) contextualizes a shared preference with each agent's
-            state relative to its teammates. Collaborative Self-Improvement (CSI) gathers neighboring
-            trajectories, re-scores them under the center preference, and replays the selected pseudo-expert.
-          </p>
-        </div>
-        <aside class="project-facts" aria-label="PAMAO project facts">
-          <div>
-            <span>Problems</span>
-            <strong>MOMTSP and MOMAFJSP</strong>
-          </div>
-          <div>
-            <span>Backbones</span>
-            <strong>MACSIM and PARCO-WECA</strong>
-          </div>
-          <div>
-            <span>Goal</span>
-            <strong>Improve preference-conditioned Pareto fronts</strong>
-          </div>
-        </aside>
-      </section>
-
-      <section class="project-section" aria-labelledby="results-title">
-        <div class="section-heading compact">
-          <p>Combinatorial optimization</p>
-          <h2 id="results-title">Method and early comparison figures.</h2>
-        </div>
-        <div class="pamao-figures">
-          <figure class="paper-figure paper-figure-wide">
-            <img
-              src="../assets/img/pamao/method-overview.webp"
-              alt="Detailed PAMAO architecture overview"
-              loading="lazy"
-            />
-            <figcaption>Architecture overview used in the current paper draft.</figcaption>
-          </figure>
-          <figure class="paper-figure">
-            <img
-              src="../assets/img/pamao/momtsp-ablation.png"
-              alt="MOMTSP ablation chart comparing Base, AWPI only, CSI only, and PAMAO-M"
-              loading="lazy"
-            />
-            <figcaption>MOMTSP ablation figure comparing the two proposed components.</figcaption>
-          </figure>
-        </div>
-        <p class="project-note">This page currently uses the available paper figures as a visual project preview.</p>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <p>© 2026 Shi Luode. Built as a static academic personal website.</p>
-      <a href="mailto:e1539282@u.nus.edu">e1539282@u.nus.edu</a>
-    </footer>
+    <footer class="site-footer"><span>© <span data-current-year>2026</span> Shi Luode</span><a href="mailto:e1539282@u.nus.edu">e1539282@u.nus.edu</a></footer>
     <script src="../script.js"></script>
   </body>
 </html>

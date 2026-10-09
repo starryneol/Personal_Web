@@ -3,325 +3,149 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ffffff" />
     <title>Shi Luode | Robotics and Reinforcement Learning</title>
     <meta
       name="description"
-      content="Shi Luode's academic personal website for robotics, reinforcement learning, autonomous exploration, path planning, and machine vision."
+      content="Shi Luode is an MSc Robotics student at the National University of Singapore working on reinforcement learning, autonomous exploration, and multi-agent optimization."
     />
+    <link rel="canonical" href="https://starryneol.github.io/Personal_Web/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Shi Luode" />
+    <meta property="og:title" content="Shi Luode | Robotics and Reinforcement Learning" />
+    <meta property="og:description" content="MSc Robotics student at NUS. I work on robot exploration and multi-agent combinatorial optimization, currently focusing on PAMAO." />
+    <meta property="og:url" content="https://starryneol.github.io/Personal_Web/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Shi Luode | Robotics and Reinforcement Learning" />
+    <meta name="twitter:description" content="MSc Robotics student at NUS. I work on robot exploration and multi-agent combinatorial optimization, currently focusing on PAMAO." />
     <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
     <header class="site-header">
-      <a class="brand" href="#home" aria-label="Shi Luode homepage">
-        <span class="brand-mark">SL</span>
-        <span>
-          <strong>Shi Luode</strong>
-          <small>施罗德</small>
-        </span>
-      </a>
-
-      <nav class="nav" aria-label="Primary navigation">
-        <a class="nav-link active" href="#home">Home</a>
+      <a class="brand" href="#home" aria-label="Shi Luode homepage">Shi Luode</a>
+      <button class="mobile-menu" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span>
+      </button>
+      <nav class="nav" id="site-nav" aria-label="Primary navigation">
+        <a class="nav-link active" href="#home" aria-current="location">Home</a>
         <a class="nav-link" href="#research">Research</a>
         <a class="nav-link" href="#news">News</a>
         <a class="nav-link" href="#education">Education</a>
+        <a class="nav-link" href="#experience">Experience</a>
         <a class="nav-link" href="#honors">Honors</a>
         <a class="nav-link" href="assets/docs/Shi_Luode_CV.pdf">CV</a>
       </nav>
-
-      <button class="mobile-menu" type="button" aria-label="Open navigation" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
     </header>
 
-    <main id="home">
-      <section class="hero section" aria-labelledby="intro-title">
-        <div class="hero-copy">
-          <h1 id="intro-title">Shi Luode</h1>
-          <p class="subtitle">MSc Robotics Student at the National University of Singapore</p>
-          <p class="hero-email">
-            <span>School email</span>
-            <a href="mailto:e1539282@u.nus.edu">e1539282@u.nus.edu</a>
-          </p>
-          <p class="intro">
-            I work on <strong>reinforcement learning</strong> and <strong>robot autonomous exploration</strong>,
-            with interests in <strong>path planning</strong>, <strong>embodied AI</strong>, and
-            <strong>machine vision</strong>. My current research explores how learning-based planners can
-            select informative frontier viewpoints while respecting low-level motion constraints.
-          </p>
-          <div class="interest-row" aria-label="Research interests">
-            <span>Reinforcement Learning</span>
-            <span>Autonomous Exploration</span>
-            <span>Path Planning</span>
-            <span>Machine Vision</span>
-          </div>
-          <div class="action-row">
-            <a class="button primary" href="assets/docs/Shi_Luode_CV.pdf">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M12 3v11m0 0 4-4m-4 4-4-4" />
-                <path d="M5 19h14" />
-              </svg>
-              CV
-            </a>
-            <a class="button" href="#research">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M4 19V5m0 14h16" />
-                <path d="m7 15 4-4 3 3 5-7" />
-              </svg>
-              Research
-            </a>
-            <a class="button" href="mailto:e1539282@u.nus.edu">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M4 6h16v12H4z" />
-                <path d="m4 7 8 6 8-6" />
-              </svg>
-              Contact
-            </a>
-          </div>
+    <main id="main-content" class="page-shell" tabindex="-1">
+      <section id="home" class="intro-section" aria-labelledby="intro-title">
+        <h1 id="intro-title">Shi Luode</h1>
+        <p class="subtitle">MSc Robotics Student at the National University of Singapore</p>
+        <p class="intro-copy">
+          I work on reinforcement learning, autonomous robot exploration, and combinatorial optimization. My
+          interests include path planning, embodied AI, and machine vision. I currently work on
+          <a href="#pamao">PAMAO</a>.
+        </p>
+        <div class="intro-links">
+          <a href="mailto:e1539282@u.nus.edu">e1539282@u.nus.edu</a>
+          <a href="assets/docs/Shi_Luode_CV.pdf">Curriculum vitae</a>
         </div>
-
-        <aside class="profile-card" aria-label="Profile summary">
-          <div class="avatar">SL</div>
-          <div>
-            <h2>Current Focus</h2>
-            <p>
-              <strong>Ariadne2</strong>: reinforcement learning for single-robot autonomous exploration
-              in unknown occupancy-grid environments.
-            </p>
-          </div>
-          <figure class="focus-visual">
-            <img
-              src="assets/img/ariadne-exploration-map.png"
-              alt="Ariadne2 autonomous exploration map with robot path and candidate frontier regions"
-            />
-          </figure>
-          <dl class="facts">
-            <div>
-              <dt>Affiliation</dt>
-              <dd>MARMoT Laboratory, NUS</dd>
-            </div>
-            <div>
-              <dt>Methods</dt>
-              <dd>SAC · Transformer · A* · Ray</dd>
-            </div>
-            <div>
-              <dt>School Email</dt>
-              <dd><a href="mailto:e1539282@u.nus.edu">e1539282@u.nus.edu</a></dd>
-            </div>
-            <div>
-              <dt>Personal Email</dt>
-              <dd><a href="mailto:1025329215@qq.com">1025329215@qq.com</a></dd>
-            </div>
-          </dl>
-        </aside>
+        <p class="affiliation"><a href="https://marmotlab.org/" target="_blank" rel="noreferrer">MARMoT Laboratory</a></p>
       </section>
 
-      <section id="research" class="section split-section" aria-labelledby="research-title">
-        <div class="section-heading">
-          <p>Featured Research</p>
-          <h2 id="research-title">Learning-based planning for robotic decision making.</h2>
+      <section id="research" class="content-section research-section" aria-labelledby="research-title">
+        <div class="section-intro">
+          <h2 id="research-title">Research</h2>
+          <p>Learning-based planning, multi-agent decision making, and combinatorial optimization.</p>
         </div>
 
-        <article class="featured-project">
-          <div class="project-visual">
-            <img
-              src="assets/img/ariadne-exploration-map.png"
-              alt="Ariadne2 autonomous exploration map with robot path and candidate frontier regions"
-            />
-          </div>
-          <div class="project-copy">
-            <div class="project-meta">
-              <span>Research Project</span>
-              <span>2025 - Present</span>
-            </div>
-            <h3>Ariadne2: Reinforcement Learning for Single-Robot Autonomous Exploration</h3>
+        <article class="research-entry">
+          <div class="research-copy">
+            <h3><a href="ariadne2/">Ariadne2</a></h3>
+            <p class="research-tagline">Reinforcement learning for single-robot autonomous exploration</p>
+            <p class="entry-meta"><span class="project-status">Earlier project</span><span aria-hidden="true">·</span> MARMoT Laboratory, NUS</p>
             <p>
-              This project formulates exploration in unknown <strong>occupancy-grid environments</strong>
-              as a <strong>graph-structured sequential decision problem</strong> over dynamic frontier
-              viewpoints. The framework combines <strong>frontier clustering</strong>,
-              <strong>Gaussian viewpoint proposal</strong>, <strong>Transformer encoding</strong>,
-              <strong>pointer-style action selection</strong>, <strong>A*-constrained execution</strong>,
-              <strong>Soft Actor-Critic</strong>, expert-aligned rewards, and a
-              <strong>Ray-based distributed rollout pipeline</strong>.
+              A learning-based planner for exploration in unknown occupancy-grid environments. Ariadne2 treats
+              frontier viewpoints as a graph-structured sequential decision problem, combining frontier
+              clustering, Transformer policies, A*-constrained execution, and Soft Actor-Critic training.
             </p>
-            <div class="project-links">
-              <a href="ariadne2/">Project page</a>
-              <a href="assets/docs/Shi_Luode_CV.pdf">CV</a>
-            </div>
+            <div class="entry-links"><a href="ariadne2/">Project page <span aria-hidden="true">↗</span></a></div>
           </div>
+          <a class="research-thumb" href="ariadne2/" aria-label="View the Ariadne2 project">
+            <img src="assets/img/ariadne2/overview.webp" alt="Exploration map showing a robot route and candidate frontier viewpoints" loading="lazy" width="1200" height="676" />
+          </a>
         </article>
 
-        <div class="research-list">
-          <article>
-            <div class="research-card-visual">
-              <img
-                src="assets/img/pamao/momtsp-ablation.png"
-                alt="MOMTSP ablation chart comparing the base method, AWPI, CSI, and PAMAO-M"
-                loading="lazy"
-              />
-            </div>
-            <h3>PAMAO: Preference-Adaptive Multi-Agent Optimization</h3>
+        <article id="pamao" class="research-entry">
+          <div class="research-copy">
+            <h3><a href="pamao/">PAMAO</a></h3>
+            <p class="research-tagline">Preference-adaptive multi-agent combinatorial optimization</p>
+            <p class="entry-meta"><span class="project-status project-status-current">Current project</span><span aria-hidden="true">·</span> 2026–Present</p>
             <p>
-              We propose PAMAO, an architecture-agnostic framework for
-              <strong>multi-objective multi-agent combinatorial optimization</strong>. <strong>Agent-wise
-              Preference Injection (AWPI)</strong> uses each agent's decoder state relative to its teammates
-              to adapt how a shared preference shapes its query before joint decisions. <strong>Collaborative
-              Self-Improvement (CSI)</strong> gathers candidate trajectories from neighboring preferences,
-              re-scores them for the center preference, and replays the selected pseudo-expert to improve
-              training. Experiments cover multi-objective multiple traveling salesman (MOMTSP) and
-              multi-objective multi-agent flexible job-shop scheduling (MOMAFJSP). We instantiate PAMAO
-              with MACSIM and PARCO-WECA backbones; results improve on preference-conditioned baselines,
-              while specialized solvers remain stronger in some settings.
+              An architecture-agnostic framework for multi-objective multi-agent combinatorial optimization.
+              Agent-wise Preference Injection adapts decisions to each agent’s role; Collaborative
+              Self-Improvement re-scores trajectories from neighboring preferences to improve training.
             </p>
-            <div class="project-links">
-              <button type="button" data-toggle="pamao-abstract">Abstract</button>
-              <a href="pamao/">Project page</a>
+            <div class="entry-links"><a href="pamao/">Project page <span aria-hidden="true">↗</span></a><button type="button" data-toggle="pamao-abstract" aria-controls="pamao-abstract" aria-expanded="false">Abstract <span aria-hidden="true">+</span></button></div>
+            <div id="pamao-abstract" class="abstract is-collapsed">
+              <p>
+                Existing neural solvers for multi-agent combinatorial optimization coordinate multiple agents
+                toward a single global objective. PAMAO addresses the multi-objective setting by accounting for
+                the agents’ distinct, evolving states during decision-making and by reusing solutions from nearby
+                preference subproblems during learning. Experiments evaluate MOMTSP, MOHCVRP, and MOMAFJSP
+                across MACSIM and PARCO-WECA backbones.
+              </p>
             </div>
-            <p id="pamao-abstract" class="abstract is-collapsed">
-              Existing neural solvers for multi-agent combinatorial optimization (MACO) coordinate the
-              decisions of multiple agents, such as vehicles in routing and machines in scheduling,
-              toward a single global objective. In practice, however, applications often involve
-              conflicting objectives, giving rise to multi-objective MACO (MOMACO). Extending existing
-              multi-objective neural methods to MOMACO is non-trivial because they overlook the
-              multi-agent structure in both decision-making and learning. In decision-making, a shared
-              preference must induce different decisions for agents with distinct, evolving states; in
-              learning, solutions obtained under different preferences should be exploited as
-              complementary supervision for improving the Pareto front (PF). To address these
-              challenges, we propose PAMAO, an architecture-agnostic framework for MOMACO. First, we
-              introduce an agent-wise preference adaptation module that contextualizes the shared
-              preference with each agent's state relative to its teammates, yielding agent-specific
-              queries at each decision step. Second, we propose a neighborhood collaborative
-              self-improving scheme in which each preference subproblem selects its supervision from
-              the expert solutions within its neighborhood. Experiments on multi-objective routing and
-              scheduling problems show that PAMAO consistently improves the PFs of its multi-objective
-              base method across two MACO backbones.
-            </p>
-          </article>
-          <article>
-            <h3>Machine Vision</h3>
-            <p>
-              Experience in data collection and annotation, <strong>DeepSort</strong>,
-              MMTracking customization, and MXVision-based industrial inspection workflows.
-            </p>
-          </article>
-        </div>
-
-        <figure class="method-overview">
-          <a
-              href="assets/img/pamao-method-overview.webp"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Open the full-size PAMAO method overview in a new tab"
-          >
-            <img
-              src="assets/img/pamao-method-overview.webp"
-              alt="PAMAO diagram showing agent-wise preference injection before joint decisions and collaborative self-improvement during training"
-              width="2300"
-              height="1100"
-              loading="lazy"
-            />
+          </div>
+          <a class="research-thumb research-thumb-chart" href="pamao/" aria-label="View PAMAO results">
+            <img src="assets/img/pamao/momtsp-ablation.png" alt="Ablation results for PAMAO components on MOMTSP" loading="lazy" width="950" height="390" />
           </a>
-          <figcaption>
-            PAMAO overview: AWPI adapts the shared preference to team-relative agent states; CSI
-            exchanges and re-scores trajectories from neighboring preferences during training.
-          </figcaption>
-        </figure>
+        </article>
       </section>
 
-      <section id="news" class="section two-column" aria-labelledby="news-title">
-        <div class="section-heading compact">
-          <p>Latest News</p>
-          <h2 id="news-title">Recent updates</h2>
+      <section id="news" class="content-section split-section" aria-labelledby="news-title">
+        <div class="section-intro"><h2 id="news-title">News</h2></div>
+        <div class="simple-list timeline">
+          <article><time datetime="2025-12">Dec 2025</time><p>Joined the MARMoT Laboratory at NUS as a Research Assistant, working on robot autonomous exploration.</p></article>
+          <article><time datetime="2025">2025</time><p>Started MSc studies in Robotics at the National University of Singapore.</p></article>
         </div>
-        <div class="timeline">
+      </section>
+
+      <section id="education" class="content-section split-section" aria-labelledby="education-title">
+        <div class="section-intro"><h2 id="education-title">Education</h2></div>
+        <div class="simple-list education-list">
           <article>
-            <time>Dec 2025</time>
-            <p>Joined the <strong>MARMoT Laboratory</strong> at NUS as a Research Assistant on robot autonomous exploration.</p>
+            <div><h3>National University of Singapore</h3><p class="entry-meta">2025–2026</p></div>
+            <div><p><strong>MSc in Robotics</strong></p><p class="muted">Research focus: reinforcement learning, autonomous exploration, path planning, and machine vision.</p></div>
           </article>
           <article>
-            <time>2025</time>
-            <p>Started MSc studies in <strong>Robotics</strong> at the National University of Singapore.</p>
-          </article>
-          <article>
-            <time>2024</time>
-            <p>Awarded the <strong>Second-class Academic Scholarship</strong> at Shandong University.</p>
-          </article>
-          <article>
-            <time>2024</time>
-            <p>Selected as an <strong>Outstanding Camper</strong> at Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences.</p>
+            <div><h3>Shandong University</h3><p class="entry-meta">2021–2025</p></div>
+            <div><p><strong>BEng in Optical Information Science and Engineering</strong></p><p class="muted">GPA: 3.61 / 5.00 · Rank: 7/43</p></div>
           </article>
         </div>
       </section>
 
-      <section id="education" class="section two-column" aria-labelledby="education-title">
-        <div class="section-heading compact">
-          <p>Education</p>
-          <h2 id="education-title">Academic background</h2>
-        </div>
-        <div class="education-list">
-          <article>
-            <div class="school-mark nus-mark">NUS</div>
-            <div>
-              <div class="row-title">
-                <h3>National University of Singapore</h3>
-                <span>2025 - 2026</span>
-              </div>
-              <p><strong>MSc in Robotics</strong></p>
-              <p class="muted">Research focus: reinforcement learning, autonomous exploration, path planning, and machine vision.</p>
-            </div>
-          </article>
-          <article>
-            <div class="school-mark sdu-mark">SDU</div>
-            <div>
-              <div class="row-title">
-                <h3>Shandong University</h3>
-                <span>2021 - 2025</span>
-              </div>
-              <p>BSc in Optical Information Science and Engineering</p>
-              <p class="muted"><strong>GPA: 3.61 / 5.00</strong>, <strong>Rank: 7/43</strong>. Relevant coursework: Digital Electronics, Analog Electronics, Microelectronics, Computer Graphics and Vision.</p>
-            </div>
-          </article>
+      <section id="experience" class="content-section split-section" aria-labelledby="experience-title">
+        <div class="section-intro"><h2 id="experience-title">Experience</h2></div>
+        <div class="simple-list experience-list">
+          <article><div><h3>Machine Vision Intern</h3><p class="entry-meta">Jul–Aug 2024</p></div><div><p><strong>Shandong Institutes of Industrial Technology</strong></p><p class="muted">Built an industrial inspection workflow for open glass bottles using camera calibration, MXVision, image-region rules, and C# reporting scripts.</p></div></article>
         </div>
       </section>
 
-      <section id="honors" class="section two-column" aria-labelledby="honors-title">
-        <div class="section-heading compact">
-          <p>Honors</p>
-          <h2 id="honors-title">Awards and recognition</h2>
-        </div>
-        <div class="honors-list">
-          <article>
-            <time>2024</time>
-            <p><strong>Second-class Academic Scholarship</strong>, Shandong University</p>
-          </article>
-          <article>
-            <time>2024</time>
-            <p><strong>Outstanding Camper</strong>, Shanghai Institute of Optics and Fine Mechanics, Chinese Academy of Sciences</p>
-          </article>
-          <article>
-            <time>2023</time>
-            <p><strong>Third-class Academic Scholarship</strong>, Shandong University</p>
-          </article>
-          <article>
-            <time></time>
-            <p><strong>Optoelectronics Alumni Scholarship</strong>, School of Information Science and Engineering, Shandong University</p>
-          </article>
+      <section id="honors" class="content-section split-section" aria-labelledby="honors-title">
+        <div class="section-intro"><h2 id="honors-title">Honors</h2></div>
+        <div class="simple-list honors-list">
+          <article class="honor-undated"><p>Optoelectronics Alumni Scholarship, School of Information Science and Engineering, Shandong University</p></article>
+          <article><time>2024</time><p>Second-class Academic Scholarship, Shandong University</p></article>
+          <article><time>2024</time><p>Outstanding Camper, Shanghai Institute of Optics and Fine Mechanics</p></article>
+          <article><time>2023</time><p>Third-class Academic Scholarship, Shandong University</p></article>
         </div>
       </section>
     </main>
 
-    <footer class="site-footer">
-      <p>© 2026 Shi Luode. Built as a static academic personal website.</p>
-      <div>
-        <a href="mailto:e1539282@u.nus.edu">e1539282@u.nus.edu</a>
-        <span aria-hidden="true"> · </span>
-        <a href="mailto:1025329215@qq.com">1025329215@qq.com</a>
-      </div>
-    </footer>
-
+    <footer class="site-footer"><span>© <span data-current-year>2026</span> Shi Luode</span><a href="mailto:e1539282@u.nus.edu">e1539282@u.nus.edu</a></footer>
     <script src="script.js"></script>
   </body>
 </html>
