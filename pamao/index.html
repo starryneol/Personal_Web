@@ -49,8 +49,9 @@
           We propose PAMAO, an architecture-agnostic framework for MOMACO. Agent-wise Preference Injection
           (AWPI) contextualizes the shared preference with each agent’s state relative to its teammates,
           yielding agent-specific queries at each decision step. Collaborative Self-Improvement (CSI) lets each
-          preference subproblem select its supervision from expert solutions in its neighborhood. Experiments
-          evaluate MOMTSP, MOHCVRP, and MOMAFJSP using MACSIM and PARCO-WECA backbones.
+          preference subproblem select supervision from expert solutions in its neighborhood. AWPI and CSI are
+          integrated into MACSIM and PARCO-WECA without replacing their encoders or action decoders. Experiments
+          cover MOMTSP, MOHCVRP, and MOMAFJSP; DCAN is additionally evaluated with its official greedy protocol.
         </p>
         <dl class="project-facts">
           <div><dt>Components</dt><dd>AWPI · CSI</dd></div>
@@ -60,12 +61,20 @@
       </section>
 
       <section class="project-block" aria-labelledby="results-title">
-        <h2 id="results-title">Evaluation</h2>
+        <h2 id="results-title">Evaluation and Findings</h2>
         <p>
           We evaluate preference-conditioned solution quality and trade-off coverage on three tasks:
           multi-objective multiple traveling-salesperson (MOMTSP), multi-objective heterogeneous capacitated
           vehicle-routing (MOHCVRP), and multi-objective multi-agent flexible job-shop scheduling (MOMAFJSP).
-          The ablation below compares the full method with variants that remove one of its two components.
+          On generated routing benchmarks, both PAMAO-M (MACSIM) and PAMAO-P (PARCO-WECA) improve over their
+          respective base backbones; on generated scheduling tests, PAMAO-M improves over MACSIM. Under DCAN’s
+          official greedy protocol, PAMAO-D improves over DCAN in most tested two- and three-objective settings,
+          including larger scales.
+        </p>
+        <p>
+          On public routing, vehicle-routing, and scheduling benchmarks, PAMAO-M improves average solution-set
+          quality over the MACSIM-WECA baseline in all three task groups. The ablation below compares the full
+          method with variants that remove one of its two components.
         </p>
         <figure class="project-figure results-figure">
           <img src="../assets/img/pamao/momtsp-ablation.png" alt="MOMTSP ablation comparing the base method, AWPI, CSI, and PAMAO-M" loading="lazy" width="950" height="390" />

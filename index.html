@@ -68,8 +68,9 @@
             <p class="entry-meta"><span class="project-status">Earlier project</span><span aria-hidden="true">·</span> MARMoT Laboratory, NUS</p>
             <p>
               A learning-based planner for exploration in unknown occupancy-grid environments. Ariadne2 treats
-              frontier viewpoints as a graph-structured sequential decision problem, combining frontier
-              clustering, Transformer policies, A*-constrained execution, and Soft Actor-Critic training.
+              frontier viewpoints as a graph-structured sequential decision problem. It combines candidate
+              generation and filtering, a Transformer policy, A*-constrained execution, and Soft Actor-Critic
+              training guided by expert routes.
             </p>
             <div class="entry-links"><a href="ariadne2/">Project page <span aria-hidden="true">↗</span></a></div>
           </div>
@@ -86,7 +87,8 @@
             <p>
               An architecture-agnostic framework for multi-objective multi-agent combinatorial optimization.
               Agent-wise Preference Injection adapts decisions to each agent’s role; Collaborative
-              Self-Improvement re-scores trajectories from neighboring preferences to improve training.
+              Self-Improvement reuses solutions from neighboring preferences. Evaluations span routing and
+              scheduling tasks, with gains over the corresponding solver backbones on the reported settings.
             </p>
             <div class="entry-links"><a href="pamao/">Project page <span aria-hidden="true">↗</span></a><button type="button" data-toggle="pamao-abstract" aria-controls="pamao-abstract" aria-expanded="false">Abstract <span aria-hidden="true">+</span></button></div>
             <div id="pamao-abstract" class="abstract is-collapsed">

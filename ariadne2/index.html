@@ -54,12 +54,21 @@
       </section>
 
       <section class="project-block" aria-labelledby="approach-title">
-        <h2 id="approach-title">Approach</h2>
+        <h2 id="approach-title">Project Highlights</h2>
         <p>
-          At each decision step, the planner proposes and groups frontier viewpoints, estimates their newly
-          visible area, and encodes the candidates with the current map state. A pointer-style policy selects
-          the next viewpoint; A* constrains its execution to traversable paths. Expert-aligned rewards combine
-          exploration coverage and travel distance during Soft Actor-Critic training.
+          <strong>Candidate planning.</strong> Candidate viewpoints are generated around map frontiers, snapped
+          to traversable locations, deduplicated, ranked by newly visible area, and grouped. The action list is
+          capped at 25 candidates per decision.
+        </p>
+        <p>
+          <strong>Expert-guided learning.</strong> An expert planner favors viewpoints with low overlap in newly
+          visible regions and orders them to reduce travel. Its routes, together with exploration-coverage and
+          travel-distance rewards, guide a Soft Actor-Critic policy with two value networks.
+        </p>
+        <p>
+          <strong>Implementation and evaluation.</strong> The map graph, candidate planner, policy, and parallel
+          simulation were integrated with Ray. The system was tested on 100 maps with up to 600 decisions per
+          run; map-completion rate and travel distance were recorded.
         </p>
       </section>
 
