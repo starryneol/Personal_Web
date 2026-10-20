@@ -174,7 +174,7 @@ h1, h2, .research-copy h3, .project-title {
   text-decoration: none;
 }
 .research-thumb img { display: block; width: 100%; height: 100%; object-fit: cover; }
-.research-thumb-chart img { padding: 8px; object-fit: contain; }
+.research-thumb-figure img { padding: 8px; object-fit: contain; }
 .abstract { max-width: 740px; margin-top: 17px; padding: 15px 18px; border-left: 2px solid var(--navy); background: var(--soft); }
 .abstract p { margin: 0; color: #455163; font-size: 14px; line-height: 1.7; }
 .abstract.is-collapsed { display: none; }
