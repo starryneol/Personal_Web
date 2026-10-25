@@ -217,7 +217,7 @@ h1, h2, .research-copy h3, .project-title {
 .project-figure img { display: block; width: 100%; height: auto; }
 .project-figure figcaption { margin-top: 8px; color: var(--muted); font-size: 13px; line-height: 1.55; }
 .project-video { max-width: 800px; margin: 20px auto 0; aspect-ratio: 16 / 9; overflow: hidden; border-radius: 10px; background: #111827; }
-.project-video iframe { display: block; width: 100%; height: 100%; border: 0; }
+.project-video video { display: block; width: 100%; height: 100%; border: 0; background: #111827; object-fit: contain; }
 .project-block .video-source { margin: 10px auto 0; font-size: 14px; }
 .video-source a { text-underline-offset: 3px; }
 .project-facts { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); margin: 20px 0 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
